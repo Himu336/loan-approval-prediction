@@ -53,6 +53,6 @@ def predict():
         logging.error(f"❌ Prediction error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
-# Run the Flask app
+# Run the Flask apps
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5001, debug=True)
