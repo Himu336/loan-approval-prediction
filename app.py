@@ -26,12 +26,12 @@ def predict():
     try:
         data = request.get_json()
 
-        if "income" not in data or "creditScore" not in data:
-            return jsonify({"error": "Missing fields: income, creditScore"}), 400
+        if "income" not in data or "credit_score" not in data:
+            return jsonify({"error": "Missing fields: income, credit_score"}), 400
 
         try:
             income = float(data["income"])
-            credit_score = float(data["creditScore"])
+            credit_score = float(data["credit_score"])
         except ValueError:
             return jsonify({"error": "Invalid input format"}), 400
 
